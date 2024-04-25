@@ -1,7 +1,7 @@
 <x-layout_base>
 <!-- Hero -->
 <div class="relative overflow-hidden">
-  <div class="mx-auto max-w-screen-md py-12 px-4 sm:px-6 md:max-w-screen-xl md:py-20 lg:py-32 md:px-8">
+  <div class="mx-auto max-w-screen-md py-12 px-4 sm:px-6 md:max-w-screen-xl md:py-20 lg:py-7 md:px-8">
     <div class="md:pe-8 md:w-1/2 xl:pe-0 xl:w-5/12">
       <!-- Title -->
       <h1 class="text-3xl text-gray-800 font-bold md:text-4xl md:leading-tight lg:text-5xl lg:leading-tight dark:text-blue-400">
@@ -26,21 +26,22 @@
 
       <div class="py-6 flex items-center text-sm text-gray-400 uppercase before:flex-1 before:border-t before:me-6 after:flex-1 after:border-t after:ms-6 dark:text-neutral-500 dark:before:border-neutral-700 dark:after:border-neutral-700">Ou</div>
 
-      <!-- Form -->
-      <form>
+      <!-- form -->
+      <form action="{{route('salva-usuario')}}" method="POST">
+        @csrf
         <div class="mb-4">
           <label for="hs-hero-name-2" class="block text-sm font-medium dark:text-white"><span class="sr-only">Full </span></label>
-          <input type="text" id="hs-hero-name-2" class="rounded-lg border border-gray-200 py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-white dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-gray-500 dark:focus:ring-neutral-600" placeholder="Seu nome">
+          <input type="text" name="nome" id="hs-hero-name-2" class="rounded-lg border border-gray-200 py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-white dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-gray-700 dark:focus:ring-neutral-600" placeholder="Seu nome">
         </div>
 
         <div class="mb-4">
           <label for="hs-hero-email-2" class="block text-sm font-medium dark:text-white"><span class="sr-only">Email adress</span></label>
-          <input type="email" id="hs-hero-email-2" class="rounded-lg border border-gray-200 py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-white dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-gray-500 dark:focus:ring-neutral-600" placeholder="Email">
+          <input type="email" name="email" id="hs-hero-email-2" class="rounded-lg border border-gray-200 py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-white dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-gray-700 dark:focus:ring-neutral-600" placeholder="Email">
         </div>
 
         <div class="mb-4">
           <label for="hs-hero-password-2" class="block text-sm font-medium dark:text-white"><span class="sr-only">Password</span></label>
-          <input type="email" id="hs-hero-password-2" class="rounded-lg border border-gray-200 py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-white dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-gray-500 dark:focus:ring-neutral-600" placeholder="Senha">
+          <input type="password" name="senha" id="hs-hero-password-2" class="rounded-lg border border-gray-200 py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-white dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-gray-700 dark:focus:ring-neutral-600" placeholder="Senha">
         </div>
 
         <div class="grid">
