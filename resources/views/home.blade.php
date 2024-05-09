@@ -46,19 +46,23 @@
           Ofertas do dia
       </div>
       <div class="grid grid-cols-4 gap-3">
-        {{-- for(variavel = inicio; até onde; de quanto aumenta) --}}
-        @for ($i = 0; $i < 76; $i++)
+
+        @foreach ($listaProdutos as $produto)
         <div class="card bg-base-100 shadow-xl">
-          <figure><img src="https://picsum.photos/400?randow{{$i}}" alt="Shoes" /></figure>
-          <div class="card-body">
-            <h2 class="card-title">{{fake()->company()}}</h2>
-            <p>{{fake()->realText(100, 1)}}</p>
-            <div class="card-actions justify-end">
-              <button class="btn btn-primary">Compre já</button>
+          <figure><img class="aspect-square w-full object-contain" src="{{$produto->foto}}" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">{{$produto->nome}}</h2>
+             <p>{{$produto->descricao}}</p>
+              <div class="card-actions justify-between">
+                <div><strong>R${{$produto->preco}}</strong></div>
+                <div><em>35%off</em></div>
+                <button class="btn btn-primary justify-">Compre já</button>
+             </div>
             </div>
           </div>
-        </div>
-        @endfor
+        @endforeach
+
+  
       </div>
 
     </div>
