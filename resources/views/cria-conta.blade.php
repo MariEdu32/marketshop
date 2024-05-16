@@ -33,7 +33,7 @@
           <label for="hs-hero-name-2" class="block text-sm font-medium dark:text-white"><span class="sr-only">Full </span></label>
           <input type="text" name="nome" id="hs-hero-name-2" class="rounded-lg border border-gray-200 py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-white dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-gray-700 dark:focus:ring-neutral-600" placeholder="Nome">
         </div>
-
+        
         <div class="mb-4">
           <label for="hs-hero-email-2" class="block text-sm font-medium dark:text-white"><span class="sr-only">Email adress</span></label>
           <input type="email" name="email" id="hs-hero-email-2" class="rounded-lg border border-gray-200 py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-white dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-gray-700 dark:focus:ring-neutral-600" placeholder="Email">
