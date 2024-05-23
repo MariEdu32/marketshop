@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>{{$titulo ?? 'MarketShop'}}</title>
 </head>
-<body data-theme="light" class="bg-gray-50 min-h-screen">
+<body data-theme="light" class="min-h-screen bg-gradient-to-r from-blue-400 to-green-400 to-yellow-300">
     {{$slot}}
 </body>
 </html>

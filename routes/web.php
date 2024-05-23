@@ -36,3 +36,7 @@ Route::post('/salva-usuario', function (Request $request) {
 })->name('salva-usuario');
 
 
+// --------------Produtos----------------
+Route::view('/cadastra-produto', 'cadastra-produto');
+
+

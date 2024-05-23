@@ -54,9 +54,9 @@
               <h2 class="card-title">{{$produto->nome}}</h2>
              <p>{{$produto->descricao}}</p>
               <div class="card-actions justify-between">
-                <div><strong>R${{$produto->preco}}</strong></div>
+                <div><strong>R${{number_format($produto->preco, 2, ',', '.')}}</strong></div>
                 <div><em>35%off</em></div>
-                <button class="btn btn-primary justify-">Compre já</button>
+                <strong><button class="btn btn-primary justify bg-black border-black">Compre já</button></strong>
              </div>
             </div>
           </div>
