@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Produto;
 
 
+
 Route::get('/home', function () {
     return view('welcome');
 });
@@ -38,5 +39,27 @@ Route::post('/salva-usuario', function (Request $request) {
 
 // --------------Produtos----------------
 Route::view('/cadastra-produto', 'cadastra-produto');
+
+Route::post('/salva-produto',
+function (Request $request) {
+    //dd($request);
+    $produto = new Produto();
+    $produto->nome = $request->nome;
+    $produto->descricao = $request->descricao;
+    $produto->preco = $request->preco;
+
+    //pega o arquivo enviado
+    $file = $request->file('foto');
+    //salva na pasta fotos, subpasta produtos
+    $foto = $file->store('produtos', ['disk' => 'fotos']);
+
+    $produto->foto = $foto;
+
+    $produto->user_id = 1;
+
+    $produto->save();
+    dd("Salvo com sucesso!!!");
+
+})->name('salva-produto');
 
 
